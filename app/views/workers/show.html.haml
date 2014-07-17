@@ -1,0 +1,28 @@
+%p#notice= notice
+
+%p
+  %strong Name:
+  = @worker.first_name 
+  = @worker.last_name
+
+%p
+  %strong Phone:
+  = @worker.phone
+
+%p
+  %strong Email:
+  = @worker.email
+
+%p
+  %strong Address:
+  = @worker.address
+  = @worker.city 
+  = @worker.state
+  = @worker.zip
+
+%p
+  %strong Start date:
+  = @worker.start_date
+
+= link_to 'Edit', edit_worker_path(@worker)
+= link_to 'Back', workers_path
