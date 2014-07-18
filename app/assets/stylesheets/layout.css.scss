@@ -40,12 +40,12 @@
   }
 
   // Grid Background;
-  $grid-light: #fff;
-  $grid-dark:  #eee;
+  $grid-light: snow;
+  $grid-dark:  beige;
 
   html {
     height: 100%;
-    body{
+    body.sfghdf, .container{
       min-height: 100%;
       @include background-image(linear-gradient(to right, $grid-light, $grid-light $gutter, $grid-dark $gutter, $grid-dark $column, $grid-light $column));
       background-size: ($column + $gutter) $column;
@@ -58,11 +58,11 @@
 //  STRUCTURE
   *, *:before, *:after { @include box-sizing(border-box); }
   
-  html{ background: snow;  }
+  html{ background: white;  }
 
   .container{
     margin: 0 auto;
-    background: rgba(255,255,255,.95);
+    background: rgba(225,215,205,.75);
   }
 
 
@@ -71,11 +71,22 @@
   @media screen and (max-width: $cols8){
     //body{ font-size: 14px / $em; }
   }
+  
 
-  @media screen and (min-width: $cols1)  { .container{  @include width(4);  &:before{content:  'cols4';} } }
-  @media screen and (min-width: $cols8)  { .container{  @include width(8);  &:before{content:  'cols8';} } }
+  // iPhone Portrait
+  @media screen and (min-width: $cols4)  { .container{  @include width(4);  &:before{content:  'cols4';} } }
+  // S4 Portrait
+  @media screen and (min-width: $cols5)  { .container{  @include width(5);  &:before{content:  'cols5';} } }
+  
+  // iPhone Landscape
+  @media screen and (min-width: $cols7)  { .container{  @include width(7);  &:before{content:  'cols7';} } }
+  // S4 Landscape
+  @media screen and (min-width: $cols9)  { .container{  @include width(9);  &:before{content:  'cols9';} } }
+  
+
+  // iPad Portrait
   @media screen and (min-width: $cols10) { .container{  @include width(10); &:before{content: 'cols10';} } }
-  @media screen and (min-width: $cols12) { .container{  @include width(12); &:before{content: 'cols12';} } }
+  // iPad Landscape
   @media screen and (min-width: $cols14) { .container{  @include width(14); &:before{content: 'cols14';} } }
 
   @media screen and (min-width: $cols25){

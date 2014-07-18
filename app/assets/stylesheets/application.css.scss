@@ -13,11 +13,9 @@
  *= require_self
  */
 
-@import "reset";
-
 @import "bourbon";
-@import 'bitters/bitters';
-
+@import "reset";
+@import "bitters/bitters";
 
 @import "layout";
 @import "forms";
