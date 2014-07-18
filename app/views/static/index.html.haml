@@ -1,9 +1,12 @@
 %nav
 	%h1 Client Facing
-	%ul
-		%li Customers
+	%ul.default
+		%li= link_to 'Customers', customers_path
 		%li 
 			Jobs
-			%ul
-				%li Job Types
-		%li Workers
+			/ = link_to 'Jobs', jobs_path
+			%ul.default
+				%li= link_to 'Job Types', job_types_path	
+		%li= link_to 'Workers', workers_path
+
+%hr/

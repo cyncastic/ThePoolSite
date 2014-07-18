@@ -29,6 +29,10 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt-ruby (3.0.1)
+    bitters (0.9.5)
+      bourbon (>= 3.1)
+      sass (>= 3.2)
+      thor
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
@@ -153,6 +157,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
+  bitters
   bourbon
   carrierwave
   fog (~> 1.10.1)
