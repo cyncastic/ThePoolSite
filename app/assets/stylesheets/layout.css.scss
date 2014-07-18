@@ -72,11 +72,11 @@
     //body{ font-size: 14px / $em; }
   }
 
-  @media screen and (min-width: $cols1)  { .container{  @include width(6);  } }
-  @media screen and (min-width: $cols10) { .container{  @include width(8); } }
-  @media screen and (min-width: $cols12) { .container{  @include width(10); } }
-  @media screen and (min-width: $cols14) { .container{  @include width(12); } }
-  @media screen and (min-width: $cols16) { .container{  @include width(14); } }
+  @media screen and (min-width: $cols1)  { .container{  @include width(6);  &:before{content:  'cols1';} } }
+  @media screen and (min-width: $cols8)  { .container{  @include width(8);  &:before{content:  'cols8';} } }
+  @media screen and (min-width: $cols10) { .container{  @include width(10); &:before{content: 'cols10';} } }
+  @media screen and (min-width: $cols12) { .container{  @include width(12); &:before{content: 'cols12';} } }
+  @media screen and (min-width: $cols14) { .container{  @include width(14); &:before{content: 'cols14';} } }
 
   @media screen and (min-width: $cols25){
     body{ font-size: 18px / $em; }
