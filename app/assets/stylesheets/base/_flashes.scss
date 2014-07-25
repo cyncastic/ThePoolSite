@@ -1,0 +1,15 @@
+.alert {
+  @include flash($alert-color);
+}
+
+.error {
+  @include flash($error-color);
+}
+
+.notice {
+  @include flash($notice-color);
+}
+
+.success {
+  @include flash($success-color);
+}
