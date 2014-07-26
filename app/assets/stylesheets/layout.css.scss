@@ -76,7 +76,8 @@
   // iPhone Portrait
   //@media screen and (min-width: $cols4)  { .container{  @include width(4);  &:before{content:  'cols4';} } }
   // S4 Portrait
-  @media screen and (min-width: $cols5)  { .container{  @include width(5);  &:before{content:  'cols5';} } }
+  @media screen and (min-width: $cols5)  { 
+    .container{  @include width(5);  &:before{content:  'cols5';} } }
   
   // iPhone Landscape
   //@media screen and (min-width: $cols7)  { .container{  @include width(7);  &:before{content:  'cols7';} } }
@@ -111,10 +112,4 @@
 
 
 
-
-
-
-
-
-
-
+  

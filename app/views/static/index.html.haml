@@ -1,22 +1,25 @@
 %nav
+
   %h1 Data Entry
   %ul.default
     %li= link_to 'Customers', customers_path
     %li 
       Jobs
       / = link_to 'Jobs', jobs_path
-      %ul.default
-        %li= link_to 'Job Types', job_types_path  
     %li= link_to 'Workers', workers_path
+
+  %hr/
+
+  %h1 Types
+  %ul.default
+    %li= link_to 'Job Types', job_types_path
+    %li Pool Types
+    %li Filter Types
 
   %hr/
 
   %h1 Reports
   %ul.default
-    %li 
-      Weekly
-      %ul.default
-        %li 
-          Test one
-          %ul.default
-            %li Test one
+    %li Weekly
+
+  %hr/

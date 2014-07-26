@@ -1,28 +1,24 @@
 %p
-  %strong First name:
-  = @customer.first_name
-%p
-  %strong Last name:
-  = @customer.last_name
+  %strong Name:
+  = @customer.full_name
 %p
   %strong Phone:
-  = @customer.phone
+  = number_to_phone @customer.phone, area_code: true
 %p
   %strong Email:
-  = @customer.email
+  = mail_to @customer.email
 %p
   %strong Address:
+  %br/
   = @customer.address
-%p
-  %strong City:
-  = @customer.city
-%p
-  %strong State:
-  = @customer.state
-%p
-  %strong Zip:
-  = @customer.zip
+  %br/
+  #{ @customer.city }, #{@customer.state} #{@customer.zip}
 %p
   %strong Notes:
   = @customer.notes
-= link_to 'Edit', edit_customer_path(@customer)
+
+%hr/
+
+%ul
+  %li= link_to 'Edit', edit_customer_path(@customer), class: 'button'
+  %li= link_to 'Destroy', @customer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
