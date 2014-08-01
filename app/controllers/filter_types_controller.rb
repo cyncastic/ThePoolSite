@@ -24,7 +24,7 @@ class FilterTypesController < ApplicationController
     @filter_type = FilterType.new(filter_type_params)
 
     if @filter_type.save
-      redirect_to @filter_type, notice: 'Filter type was successfully created.'
+      redirect_to filter_types_url, notice: 'Filter type was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class FilterTypesController < ApplicationController
   # PATCH/PUT /filter_types/1
   def update
     if @filter_type.update(filter_type_params)
-      redirect_to @filter_type, notice: 'Filter type was successfully updated.'
+      redirect_to filter_types_url, notice: 'Filter type was successfully updated.'
     else
       render :edit
     end

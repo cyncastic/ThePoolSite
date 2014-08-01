@@ -24,7 +24,7 @@ class PoolTypesController < ApplicationController
     @pool_type = PoolType.new(pool_type_params)
 
     if @pool_type.save
-      redirect_to @pool_type, notice: 'Pool type was successfully created.'
+      redirect_to pool_types_url, notice: 'Pool type was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class PoolTypesController < ApplicationController
   # PATCH/PUT /pool_types/1
   def update
     if @pool_type.update(pool_type_params)
-      redirect_to @pool_type, notice: 'Pool type was successfully updated.'
+      redirect_to pool_types_url, notice: 'Pool type was successfully updated.'
     else
       render :edit
     end
