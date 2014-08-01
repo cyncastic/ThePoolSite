@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
   resources :customers
-
   resources :job_types
-
   resources :workers
 
   root 'static#index'

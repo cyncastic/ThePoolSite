@@ -115,7 +115,7 @@
   //@media screen and (min-width: $cols4)  { .container{  @include width(4);  &:after{content:  'cols4';} } }
   // S4 Portrait
   @media screen and (min-width: $cols5)  { 
-    .container{  @include width(5);  &:after{content:  'cols5';} } }
+    .container{  @include width(5);  &:after{content:  'cols5'; display: block; background: white; color: oliveDrab; text-align: center;} } }
   
   // iPhone Landscape
   //@media screen and (min-width: $cols7)  { .container{  @include width(7);  &:after{content:  'cols7';} } }
