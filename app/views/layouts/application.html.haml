@@ -8,14 +8,14 @@
     = csrf_meta_tags 
     %meta{ name: "viewport", content: "width=device-width, user-scalable=no"}
   %body
+    %nav.main
+      %ul
+        %li.nav-link= link_to 'Home', root_url
+        %li.nav-link= link_to 'Customers', customers_path
+        %li.nav-link= link_to 'Workers', workers_path
+        %li.nav-link Jobs
+        %li.nav-link Types
     .container
-      %nav.main
-        %ul
-          %li.nav-link= link_to 'Home', root_url
-          %li.nav-link= link_to 'Customers', customers_path
-          %li.nav-link= link_to 'Workers', workers_path
-          %li.nav-link Jobs
-          %li.nav-link Types
       .content
         - if notice
           %p.notice= notice
