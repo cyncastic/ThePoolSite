@@ -4,20 +4,12 @@
     %tr
       %th Name
       %th Phone
-      %th Email
       %th City
-      %th 
   %tbody
     - @workers.each do |worker|
       %tr
         %td
-          = worker.first_name
-          = worker.last_name
+          = link_to worker.full_name, worker
         %td= worker.phone
-        %td= worker.email
-        %td= worker.city
-        %td.actions
-          = link_to 'Show', worker
-          = link_to 'Edit', edit_worker_path(worker)
-          = link_to 'Destroy', worker, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= worker.city          
 = link_to 'New Worker', new_worker_path

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801171726) do
+ActiveRecord::Schema.define(version: 20140801181231) do
 
   create_table "customers", force: true do |t|
     t.string   "full_name"
@@ -45,8 +45,7 @@ ActiveRecord::Schema.define(version: 20140801171726) do
   end
 
   create_table "workers", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "full_name"
     t.text     "phone"
     t.string   "email"
     t.string   "address"

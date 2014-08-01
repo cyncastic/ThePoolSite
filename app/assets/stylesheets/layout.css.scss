@@ -79,6 +79,9 @@
     background: rgba(255,255,255,.75);
   }
 
+
+  
+
 //---------------------------------------------------------------------------------------------
 //  FORMS
 
@@ -99,7 +102,7 @@
     }
   }
 
-  tr{
+  tbody tr{
     transition: background-color 0.3s ease-out;
     &:hover{ background-color: rgba(0,0,0,.05); }
   }

@@ -11,10 +11,8 @@
   %fieldset
     %legend Form Heading
     .field
-      = f.label :first_name
-      = f.text_field :first_name
-      = f.label :last_name
-      = f.text_field :last_name
+      = f.label :full_name, class: 'req'
+      = f.text_field :full_name
     .field
       = f.label :phone
       = f.text_field :phone

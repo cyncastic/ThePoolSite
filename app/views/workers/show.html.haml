@@ -1,7 +1,6 @@
 %p
   %strong Name:
-  = @worker.first_name 
-  = @worker.last_name
+  = @worker.full_name 
 %p
   %strong Phone:
   = @worker.phone
@@ -10,10 +9,10 @@
   = @worker.email
 %p
   %strong Address:
+  %br/
   = @worker.address
-  = @worker.city 
-  = @worker.state
-  = @worker.zip
+  %br/
+  #{ @worker.city }, #{@worker.state} #{@worker.zip}
 %p
   %strong Start date:
   = @worker.start_date
