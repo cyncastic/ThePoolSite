@@ -21,10 +21,10 @@
   = @customer.heater
 %p
   %strong Filter Type:
-  = FilterType.find(@customer.filter_type).name
+  = @customer.filter_type || 'not listed'
 %p
   %strong Pool Type:
-  = PoolType.find(@customer.pool_type).name
+  = @customer.pool_type || 'not listed'
 %p
   %strong Notes:
   = @customer.notes
