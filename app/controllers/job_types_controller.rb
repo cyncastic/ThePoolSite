@@ -1,13 +1,9 @@
 class JobTypesController < ApplicationController
-  before_action :set_job_type, only: [:show, :edit, :update, :destroy]
+  before_action :set_job_type, only: [:edit, :update, :destroy]
 
   # GET /job_types
   def index
     @job_types = JobType.all
-  end
-
-  # GET /job_types/1
-  def show
   end
 
   # GET /job_types/new
@@ -24,7 +20,7 @@ class JobTypesController < ApplicationController
     @job_type = JobType.new(job_type_params)
 
     if @job_type.save
-      redirect_to @job_type, notice: 'Job type was successfully created.'
+      redirect_to job_types_url, notice: 'Job type was successfully created.'
     else
       render :new
     end
@@ -33,7 +29,7 @@ class JobTypesController < ApplicationController
   # PATCH/PUT /job_types/1
   def update
     if @job_type.update(job_type_params)
-      redirect_to @job_type, notice: 'Job type was successfully updated.'
+      redirect_to job_types_url, notice: 'Job type was successfully updated.'
     else
       render :edit
     end

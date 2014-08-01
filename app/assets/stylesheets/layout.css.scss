@@ -67,6 +67,34 @@
   }
 
 
+
+//---------------------------------------------------------------------------------------------
+//  FORMS
+
+  #error_explanation{
+    background: red;
+    padding: 1em;
+    p, ul{
+      color: white;
+      font-size: .9em;
+      font-weight: bold;
+    }
+  }
+  label.req{
+    &::after{ 
+      content: ' *';
+      color: crimson;
+    }
+  }
+
+  td.actions{ text-align: right;}
+
+  tr{
+    transition: background-color 0.3s ease-out;
+    &:hover{
+      background-color: rgba(0,0,0,.05);
+    }
+  }
 //---------------------------------------------------------------------------------------------
 //  MEDIA QUERIES
   //@media screen and (max-width: $cols8) { body{ font-size: 14px / $em; } }
