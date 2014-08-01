@@ -26,6 +26,18 @@
     = f.label :zip
     = f.text_field :zip
   .field
+    = f.label :salt
+    = f.check_box :salt
+  .field
+    = f.label :heater
+    = f.check_box :heater
+  .field
+    = f.label :filter_type
+    = f.collection_select(:filter_type, FilterType.all, :id, :name, {:prompt=>true}, { selected: params[:filter_type] })
+  .field
+    = f.label :pool_type
+    = f.collection_select(:pool_type, PoolType.all, :id, :name, {:prompt=>true}, { selected: params[:pool_type] })
+  .field
     = f.label :notes
     = f.text_area :notes
   .actions

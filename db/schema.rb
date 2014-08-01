@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801181231) do
+ActiveRecord::Schema.define(version: 20140801194255) do
 
   create_table "customers", force: true do |t|
     t.string   "full_name"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 20140801181231) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "heater"
+    t.boolean  "salt"
+    t.integer  "filter_type"
+    t.integer  "pool_type"
   end
 
   create_table "filter_types", force: true do |t|

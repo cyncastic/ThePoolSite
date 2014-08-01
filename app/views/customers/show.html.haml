@@ -14,6 +14,18 @@
   %br/
   #{ @customer.city }, #{@customer.state} #{@customer.zip}
 %p
+  %strong Salt:
+  = @customer.salt
+%p
+  %strong Heater:
+  = @customer.heater
+%p
+  %strong Filter Type:
+  = FilterType.find(@customer.filter_type).name
+%p
+  %strong Pool Type:
+  = PoolType.find(@customer.pool_type).name
+%p
   %strong Notes:
   = @customer.notes
 
