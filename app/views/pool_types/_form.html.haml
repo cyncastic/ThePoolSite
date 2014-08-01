@@ -1,0 +1,14 @@
+= form_for(@pool_type) do |f|
+  - if @pool_type.errors.any?
+    #error_explanation
+      %p
+        = pluralize(@job_type.errors.count, "error")
+        prohibited this job_type from being saved:
+      %ul
+      - @job_type.errors.full_messages.each do |message|
+        %li= message
+  .field
+    = f.label :name, class: 'req'
+    = f.text_field :name
+  .actions
+    = f.submit
