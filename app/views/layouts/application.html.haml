@@ -9,8 +9,12 @@
     %meta{ name: "viewport", content: "width=device-width, user-scalable=no"}
   %body
     .container
-      - if notice
-        %p.notice= notice
       %nav.main
+        %ul
+          %li= link_to 'Home', root_url
+          %li= link_to 'Customers', customers_path
+          %li= link_to 'Workers', workers_path
       .content
+        - if notice
+          %p.notice= notice
         = yield
