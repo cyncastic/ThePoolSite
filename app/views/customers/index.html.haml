@@ -4,14 +4,14 @@
     %tr
       %th Name
       %th Phone
-      %th Email
+      / %th Email
       %th Address
   %tbody
     - @customers.each do |customer|
       %tr
         %td= link_to customer.full_name, customer
         %td= number_to_phone customer.phone, area_code: true
-        %td= mail_to customer.email
+        / %td= mail_to customer.email
         %td
           = customer.address
           %br/
