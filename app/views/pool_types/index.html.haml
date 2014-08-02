@@ -11,4 +11,5 @@
         %td.actions
           = link_to 'Edit', edit_pool_type_path(pool_type)
           = link_to 'Destroy', pool_type, method: :delete, data: { confirm: 'Are you sure?' }
-= link_to 'New Pool type', new_pool_type_path
+%ul.actions
+  %li= link_to 'New Pool Type', new_pool_type_path, class: 'button'
