@@ -7,47 +7,39 @@
       %ul
         - @customer.errors.full_messages.each do |message|
           %li= message
-  .field
-    = f.label :full_name
-    = f.text_field :full_name
-  .field
-    = f.label :phone
-    = f.telephone_field :phone
-  .field
-    = f.label :cell_phone
-    = f.telephone_field :cell_phone
-  .field
-    = f.label :work_phone
-    = f.telephone_field :work_phone
-  .field
-    = f.label :other_phone
-    = f.telephone_field :other_phone
-  .field
-    = f.label :email
-    = f.email_field :email
-  .field
-    = f.label :address
-    = f.text_field :address
-    = f.label :city
-    = f.text_field :city
-    = f.label :state
-    = f.text_field :state
-    = f.label :zip
-    = f.text_field :zip
-  .field
-    = f.label :salt
-    = f.check_box :salt
-  .field
-    = f.label :heater
-    = f.check_box :heater
-  .field
-    = f.label :filter_type
-    = f.collection_select(:filter_type, FilterType.all, :id, :name, {:prompt=>true}, { selected: params[:filter_type] })
-  .field
-    = f.label :pool_type
-    = f.collection_select(:pool_type, PoolType.all, :id, :name, {:prompt=>true}, { selected: params[:pool_type] })
-  .field
-    = f.label :notes
-    = f.text_area :notes
-  .actions
-    = f.submit
+  %fieldset
+    .field
+      = f.label :full_name
+      = f.text_field :full_name
+    .field
+      = f.label :phone
+      = f.telephone_field :phone
+    .field
+      = f.label :email
+      = f.email_field :email
+    .field
+      = f.label :address
+      = f.text_field :address
+      = f.label :city
+      = f.text_field :city
+      = f.label :state
+      = f.text_field :state
+      = f.label :zip
+      = f.text_field :zip
+    .field
+      = f.label :salt
+      = f.check_box :salt
+    .field
+      = f.label :heater
+      = f.check_box :heater
+    .field
+      = f.label :filter_type
+      = f.collection_select(:filter_type, FilterType.all, :id, :name, {:prompt=>true}, { selected: params[:filter_type] })
+    .field
+      = f.label :pool_type
+      = f.collection_select(:pool_type, PoolType.all, :id, :name, {:prompt=>true}, { selected: params[:pool_type] })
+    .field
+      = f.label :notes
+      = f.text_area :notes
+    .actions
+      = f.submit
