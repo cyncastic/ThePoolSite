@@ -120,32 +120,28 @@
   // iPhone Portrait
   //@media screen and (min-width: $cols4)  { .container{  @include width(4);  &:after{content:  'cols4';} } }
   // S4 Portrait
-  @media screen and (min-width: $cols5)  { 
-    .container{  @include width(5);  &:after{content:  'cols5'; display: block; background: white; color: oliveDrab; text-align: center;} } }
+  @media screen and (min-width: $cols5) { 
+    .container{  
+      @include width(5); 
+      &:after{
+        content:  'cols5'; 
+        display: block; 
+        background: white; 
+        color: oliveDrab; 
+        text-align: center;} 
+      } 
+    }
   
   // iPhone Landscape
-  //@media screen and (min-width: $cols7)  { .container{  @include width(7);  &:after{content:  'cols7';} } }
+  //@media screen and (min-width: $cols7) { .container{  @include width(7);  &:after{content:  'cols7';} } }
   // S4 Landscape
-  @media screen and (min-width: $cols9)  { .container{  @include width(9);  &:after{content:  'cols9';} } }
+  @media screen and (min-width: $cols9) { .container{  @include width(9);  &:after{content:  'cols9';} } }
   
 
   // iPad Portrait
   //@media screen and (min-width: $cols10) { .container{  @include width(10); &:after{content: 'cols10';} } }
   // iPad Landscape and Small Screen
-  @media screen and (min-width: $cols14) { 
-    .container{  
-      @include width(14); 
-      &:after{ content: 'cols14'; }
-    } 
-    .fieldgroup{  
-      @include display(flex);
-      @include display(flex);
-      @include align-items(stretch); 
-      .field{
-        width: $cols3;
-      }
-    }
-  }
+  @media screen and (min-width: $cols14) { .container{  @include width(14); &:after{ content: 'cols14'; } } }
 
 
 
