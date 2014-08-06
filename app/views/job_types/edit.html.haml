@@ -1,2 +1,4 @@
-%h1 Editing Job Types
+%h1 Edit Job Type
 = render 'form'
+.actions
+  = link_to 'Destroy', @job_type, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button destroy'

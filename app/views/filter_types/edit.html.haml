@@ -1,2 +1,3 @@
 %h1 Editing Filter Type
 = render 'form'
+.actions= link_to 'Destroy', @filter_type, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button destroy'

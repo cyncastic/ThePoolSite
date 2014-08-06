@@ -3,12 +3,9 @@
   %thead
     %tr
       %th Name
-      %th
   %tbody
     - @job_types.each do |job_type|
       %tr
         %td= link_to job_type.name, edit_job_type_path(job_type)
-        %td.actions
-          = link_to 'Destroy', job_type, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button destroy'
 %ul.actions
   %li= link_to 'New Job Type', new_job_type_path, class: 'button'

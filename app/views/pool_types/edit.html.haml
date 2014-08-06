@@ -1,2 +1,3 @@
-%h1 Editing Oool Type
+%h1 Edit Pool Type
 = render 'form'
+.actions= link_to 'Destroy', @pool_type, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button destroy'
