@@ -1,4 +1,4 @@
-%h1 Listing jobs
+%h1 Best Day Ever
 %table
   %thead
     %tr
@@ -8,8 +8,6 @@
   %tbody
     - @jobs.each do |job|
       %tr
-        %td= link_to job.date, job
+        %td= link_to job.date_time, job
         %td= job.customer_id
         %td= job.worker_id
-%ul.actions
-  %li= link_to 'New Job', new_job_path, class: 'button'

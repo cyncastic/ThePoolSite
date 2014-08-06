@@ -1,25 +1,32 @@
 %p
+  %strong Date:
+  = @job.date
+%p
   %strong Customer:
   = @job.customer.full_name
 %p
   %strong Job type:
   = @job.job_type.name
-%p
-  %strong Date time:
-  = @job.date_time
+
 %p
   %strong Worker:
   = @job.worker.full_name
 %p
   %strong Worker notes:
   = @job.worker_notes
+
+%hr/
+
 %p
   %strong Best day ever:
   = @job.best_day_ever
 %p
   %strong Completed:
   = @job.completed
+
+
 %hr/
+
 %ul.actions
   %li= link_to 'Edit', edit_job_path(@job), class: 'button'
   %li= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button destroy'

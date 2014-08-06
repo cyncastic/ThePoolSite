@@ -16,8 +16,8 @@
       = f.label :job_type_id, class: 'req'
       = f.collection_select(:job_type_id, JobType.all, :id, :name, {:prompt=>true}, { selected: params[:job_type_id] })
     .field
-      = f.label :date_time
-      = f.datetime_field :date_time
+      = f.label :date
+      = f.date_field :date
     .field
       = f.label :worker_id
       = f.collection_select(:worker_id, Worker.all, :id, :full_name, {:prompt=>true}, { selected: params[:worker_id] })

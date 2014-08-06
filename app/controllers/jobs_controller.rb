@@ -1,6 +1,11 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
+  # GER /bde
+  def bde
+    @jobs = Job.where best_day_ever: true
+  end
+
   # GET /jobs
   def index
     @jobs = Job.all
@@ -53,6 +58,6 @@ class JobsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def job_params
-      params.require(:job).permit(:customer_id, :job_type_id, :date_time, :worker_id, :worker_notes, :best_day_ever, :completed)
+      params.require(:job).permit(:customer_id, :job_type_id, :date, :time, :worker_id, :worker_notes, :best_day_ever, :completed)
     end
 end
