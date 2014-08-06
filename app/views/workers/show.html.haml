@@ -16,4 +16,6 @@
 %p
   %strong Start date:
   = @worker.start_date
-= link_to 'Edit', edit_worker_path(@worker), class: 'button'
+%hr/
+%ul.actions
+  %li= link_to 'Edit', edit_worker_path(@worker), class: 'button'

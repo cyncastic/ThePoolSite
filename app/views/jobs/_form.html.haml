@@ -4,7 +4,7 @@
       %h2
         = pluralize(@job.errors.count, "error")
         prohibited this job from being saved:
-      %ul
+      %ul.default
         - @job.errors.full_messages.each do |message|
           %li= message
   .field

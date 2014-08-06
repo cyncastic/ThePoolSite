@@ -11,6 +11,7 @@
         %td
           = link_to worker.full_name, worker
         %td= worker.phone
-        %td= worker.city          
+        %td= worker.city
+%hr/        
 %ul.actions
   %li= link_to 'New Worker', new_worker_path, class: 'button'
