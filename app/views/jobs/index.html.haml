@@ -1,0 +1,21 @@
+%h1 Listing jobs
+%table
+  %thead
+    %tr
+      %th Date time
+      %th Customer
+      %th Job type
+      %th Worker
+      %th Worker notes
+      %th Best day ever
+      %th Completed
+  %tbody
+    - @jobs.each do |job|
+      %tr
+        %td= link_to job.date_time, job
+        %td= job.customer_id
+        %td= job.job_type_id
+        %td= job.worker_id
+        %td= job.best_day_ever
+        %td= job.completed
+= link_to 'New Job', new_job_path

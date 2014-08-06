@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  job_type_id: 
+  date_time: 
+  worker_id: 
+  worker_notes: 
+  best_day_ever: 
+  completed: false
+
+two:
+  customer_id: 
+  job_type_id: 
+  date_time: 
+  worker_id: 
+  worker_notes: 
+  best_day_ever: 
+  completed: false

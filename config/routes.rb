@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :jobs
+
   resources :filter_types
 
   resources :pool_types
