@@ -20,3 +20,4 @@
   %strong Completed:
   = @job.completed
 = link_to 'Edit', edit_job_path(@job)
+= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' }

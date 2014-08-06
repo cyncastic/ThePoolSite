@@ -27,11 +27,13 @@
       = f.label :zip
       = f.text_field :zip
     .field
-      = f.label :salt
-      = f.check_box :salt
+      %label
+        = f.check_box :salt
+        Salt
     .field
-      = f.label :heater
-      = f.check_box :heater
+      %label
+        = f.check_box :heater
+        Heater
     .field
       = f.label :filter_type
       = f.collection_select(:filter_type, FilterType.all, :id, :name, {:prompt=>true}, { selected: params[:filter_type] })
