@@ -7,29 +7,30 @@
       %ul.default
         - @job.errors.full_messages.each do |message|
           %li= message
-  .field
-    = f.label :customer_id, class: 'req'
-    = f.collection_select(:customer_id, Customer.all, :id, :full_name, {:prompt=>true}, { selected: params[:customer_id] })
+  %fieldset
+    .field
+      = f.label :customer_id, class: 'req'
+      = f.collection_select(:customer_id, Customer.all, :id, :full_name, {:prompt=>true}, { selected: params[:customer_id] })
 
-  .field
-    = f.label :job_type_id, class: 'req'
-    = f.collection_select(:job_type_id, JobType.all, :id, :name, {:prompt=>true}, { selected: params[:job_type_id] })
-  .field
-    = f.label :date_time
-    = f.datetime_field :date_time
-  .field
-    = f.label :worker_id
-    = f.collection_select(:worker_id, Worker.all, :id, :full_name, {:prompt=>true}, { selected: params[:worker_id] })
-  .field
-    %label
-      = f.check_box :best_day_ever, class: 'checkbox'
-      Best Day Ever
-  .field
-    %label
-      = f.check_box :completed, class: 'checkbox'
-      Completed
-  .field
-    = f.label :worker_notes
-    = f.text_area :worker_notes
-  .actions
-    = f.submit
+    .field
+      = f.label :job_type_id, class: 'req'
+      = f.collection_select(:job_type_id, JobType.all, :id, :name, {:prompt=>true}, { selected: params[:job_type_id] })
+    .field
+      = f.label :date_time
+      = f.datetime_field :date_time
+    .field
+      = f.label :worker_id
+      = f.collection_select(:worker_id, Worker.all, :id, :full_name, {:prompt=>true}, { selected: params[:worker_id] })
+    .field
+      %label
+        = f.check_box :best_day_ever, class: 'checkbox'
+        Best Day Ever
+    .field
+      %label
+        = f.check_box :completed, class: 'checkbox'
+        Completed
+    .field
+      = f.label :worker_notes
+      = f.text_area :worker_notes
+    .actions
+      = f.submit

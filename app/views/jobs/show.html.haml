@@ -1,15 +1,15 @@
 %p
   %strong Customer:
-  = @job.customer_id
+  = @job.customer.full_name
 %p
   %strong Job type:
-  = @job.job_type_id
+  = @job.job_type.name
 %p
   %strong Date time:
   = @job.date_time
 %p
   %strong Worker:
-  = @job.worker_id
+  = @job.worker.full_name
 %p
   %strong Worker notes:
   = @job.worker_notes

@@ -21,7 +21,7 @@
   = @customer.heater
 %p
   %strong Filter Type:
-  = @customer.filter_type || 'not listed'
+  = @customer.filter_type.name
 %p
   %strong Pool Type:
   = @customer.pool_type || 'not listed'

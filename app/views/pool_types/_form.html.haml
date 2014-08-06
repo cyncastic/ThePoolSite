@@ -7,8 +7,9 @@
       %ul
       - @job_type.errors.full_messages.each do |message|
         %li= message
-  .field
-    = f.label :name, class: 'req'
-    = f.text_field :name
-  .actions
-    = f.submit
+  %fieldset
+    .field
+      = f.label :name, class: 'req'
+      = f.text_field :name
+    .actions
+      = f.submit

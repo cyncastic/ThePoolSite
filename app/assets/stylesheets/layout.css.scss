@@ -116,18 +116,18 @@
   }
   td.actions{ text-align: right; }
 
-  ul.actions{
+  .actions{
     text-align: center;
     li{
       display: inline-block;
-      .destroy.button{
+    }
+  }
+  .destroy.button{
         background-color: red;
         &:hover{
           background-color: darken(red, 10%)
         }
       }
-    }
-  }
 
 //---------------------------------------------------------------------------------------------
 //  MEDIA QUERIES
