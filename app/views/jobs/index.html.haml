@@ -9,7 +9,7 @@
     - @jobs.each do |job|
       %tr
         %td= link_to job.date, job
-        %td= job.customer_id
-        %td= job.worker_id
+        %td= job.customer.full_name
+        %td= job.worker.full_name
 %ul.actions
   %li= link_to 'New Job', new_job_path, class: 'button'

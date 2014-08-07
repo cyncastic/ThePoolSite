@@ -4,13 +4,16 @@
     %tr
       %th Name
       %th Phone
-      %th City
+      %th Address
   %tbody
     - @workers.each do |worker|
       %tr
         %td
           = link_to worker.full_name, worker
         %td= worker.phone
-        %td= worker.city
+        %td
+          = worker.address
+          %br/
+          #{worker.city}, #{worker.state} #{worker.zip}
 %ul.actions
   %li= link_to 'New Worker', new_worker_path, class: 'button'
