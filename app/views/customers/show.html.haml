@@ -24,7 +24,7 @@
   = @customer.filter_type.name
 %p
   %strong Pool Type:
-  = @customer.pool_type || 'not listed'
+  = @customer.pool_type.name
 %p
   %strong Notes:
   = @customer.notes

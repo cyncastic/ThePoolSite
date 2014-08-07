@@ -35,11 +35,11 @@
         = f.check_box :heater
         Heater
     .field
-      = f.label :filter_type
-      = f.collection_select(:filter_type, FilterType.all, :id, :name, {:prompt=>true}, { selected: params[:filter_type] })
+      = f.label :filter_type_id
+      = f.collection_select(:filter_type_id, FilterType.all, :id, :name, {:prompt=>true}, { selected: params[:filter_type_id] })
     .field
-      = f.label :pool_type
-      = f.collection_select(:pool_type, PoolType.all, :id, :name, {:prompt=>true}, { selected: params[:pool_type] })
+      = f.label :pool_type_id
+      = f.collection_select(:pool_type_id, PoolType.all, :id, :name, {:prompt=>true}, { selected: params[:pool_type_id] })
     .field
       = f.label :notes
       = f.text_area :notes
