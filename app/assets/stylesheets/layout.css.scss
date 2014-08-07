@@ -45,7 +45,7 @@
 
   html {
     height: 100%;
-    .container{
+    .containeroff{
       min-height: 100%;
       @include background-image(linear-gradient(to right, $grid-light, $grid-light $gutter, $grid-dark $gutter, $grid-dark $column, $grid-light $column));
       background-size: ($column + $gutter) $column;
@@ -58,11 +58,11 @@
 //  STRUCTURE
   *, *:before, *:after { @include box-sizing(border-box); }
   
-  html{ background: white;  }
+  //html{ background: #e0e4cc;  }
 
   nav.main{
     @include clearfix;
-    background: whitesmoke;
+    background: white;
     padding: .25em .5em;
     box-shadow: 0 0 30px rgba(0,0,0,.25);
     top: 0;
@@ -78,8 +78,7 @@
 
   .container{
     margin: 0 auto;
-    padding-top: 3em;
-    background: rgba(255,255,255,.75);
+    padding: 3em 0 0 0;
   }
 
 
@@ -106,7 +105,9 @@
   label.req{
     &::after{ 
       content: ' *';
-      color: crimson;
+      color: $warning-red;
+      font-size: .9em;
+      
     }
   }
 
@@ -123,9 +124,9 @@
     }
   }
   .destroy.button{
-        background-color: red;
+        background-color: $warning-red;
         &:hover{
-          background-color: darken(red, 10%)
+          background-color: darken($warning-red, 10%)
         }
       }
 
@@ -144,9 +145,12 @@
       &:after{
         content:  'cols5'; 
         display: block; 
-        background: white; 
-        color: oliveDrab; 
-        text-align: center;} 
+        background: #333; 
+        color: goldenrod; 
+        padding: .25em .75em;
+        text-align: center;
+        position: fixed; top: 0; right: 0;
+      } 
       } 
     }
   

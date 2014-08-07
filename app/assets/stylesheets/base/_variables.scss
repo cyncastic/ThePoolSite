@@ -1,5 +1,5 @@
 // Typography
-$sans-serif: $helvetica;
+$sans-serif: 'Open Sans', $helvetica;
 $serif: $georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
@@ -12,16 +12,18 @@ $header-line-height: $base-font-size * 1.25;
 $base-border-radius: em(3);
 
 // Colors
-$blue: #477DCA;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #DDD;
+$blue: #09c;
+$dark-gray: #555;
+$medium-gray: #A8A8A8;
+$light-gray: #d3d3d3;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 
+$warning-red: #B33A3A;
+
 // Background Color
-$base-background-color: white;
+$base-background-color: #fdfdfd;
 
 // Font Colors
 $base-font-color: $dark-gray;
