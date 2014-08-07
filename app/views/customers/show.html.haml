@@ -21,10 +21,12 @@
   = @customer.heater
 %p
   %strong Filter Type:
-  = @customer.filter_type.name || 'not assigned'
+  - if @customer.filter_type.present?
+    =@customer.filter_type.name
 %p
   %strong Pool Type:
-  = @customer.pool_type.name || 'not assigned'
+  - if @customer.pool_type.present?
+    =@customer.pool_type.name
 %p
   %strong Notes:
   = @customer.notes
