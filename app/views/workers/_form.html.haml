@@ -8,30 +8,32 @@
         - @worker.errors.full_messages.each do |message|
           %li= message
   %fieldset
-    %legend Form Heading
-    .field
+    %legend Contact Info
+    .field.full-name
       = f.label :full_name, class: 'req'
       = f.text_field :full_name
-    .field
+    .field.phone
       = f.label :phone
       = f.text_field :phone
-    .field
+    .field.email
       = f.label :email
       = f.text_field :email
-    .field
+    .field.address
       = f.label :address
       = f.text_field :address
-    .field
+    .field.city
       = f.label :city
       = f.text_field :city
-    .field
+    .field.state
       = f.label :state
-      = f.text_field :state
-    .field
+      = f.select :state, us_states, selected: 'NY'
+
+    .field.zip
       = f.label :zip
       = f.text_field :zip
+  %fieldset
+    %legend Notes
     .field
-      = f.label :notes
       = f.text_area :notes
-    .actions
-      = f.submit class: 'btn'
+  .actions
+    = f.submit class: 'btn'
