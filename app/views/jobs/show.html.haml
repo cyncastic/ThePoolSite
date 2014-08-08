@@ -1,29 +1,24 @@
+%h1= @job.date.strftime('%Y/%m/%d')
+%h2= @job.time.strftime('@ %H:%M')
+
 
 %fieldset
-  %legend Additional Info
-  %p
-    %strong Best day ever:
-    = @job.best_day_ever
-
-%fieldset
-  %legend Info
-
-  %p
-    %strong Date:
-    = @job.date
-
-  %p
-    %strong Completed:
-    = @job.completed
+  %legend Job Info
   %p
     %strong Customer:
     = @job.customer.full_name
   %p
     %strong Job type:
     = @job.job_type.name
+  %p
+    %strong Best day ever:
+    = @job.best_day_ever
+  %p
+    %strong Completed:
+    = @job.completed
 
 %fieldset
-  %legend Info
+  %legend Worker Info
   %p
     %strong Worker:
     = @job.worker.full_name
