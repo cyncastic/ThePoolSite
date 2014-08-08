@@ -11,7 +11,6 @@ gem 'bourbon'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
 
 gem 'turbolinks'
 
