@@ -1,31 +1,36 @@
-%p
-  %strong Date:
-  = @job.date
-%p
-  %strong Customer:
-  = @job.customer.full_name
-%p
-  %strong Job type:
-  = @job.job_type.name
 
-%p
-  %strong Worker:
-  = @job.worker.full_name
-%p
-  %strong Worker notes:
-  = @job.worker_notes
+%fieldset
+  %legend Additional Info
+  %p
+    %strong Best day ever:
+    = @job.best_day_ever
 
-%hr/
+%fieldset
+  %legend Info
 
-%p
-  %strong Best day ever:
-  = @job.best_day_ever
-%p
-  %strong Completed:
-  = @job.completed
+  %p
+    %strong Date:
+    = @job.date
 
+  %p
+    %strong Completed:
+    = @job.completed
+  %p
+    %strong Customer:
+    = @job.customer.full_name
+  %p
+    %strong Job type:
+    = @job.job_type.name
 
-%hr/
+%fieldset
+  %legend Info
+  %p
+    %strong Worker:
+    = @job.worker.full_name
+  %p
+    %strong Worker notes:
+    = @job.worker_notes
+
 
 %ul.actions
   %li= link_to 'Edit', edit_job_path(@job), class: 'button'

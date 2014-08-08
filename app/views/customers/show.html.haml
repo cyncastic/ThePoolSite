@@ -35,7 +35,6 @@
   %legend Notes
   = @customer.notes
 
-%hr/
 %ul.actions
   %li= link_to 'Edit', edit_customer_path(@customer), class: 'button'
   %li= link_to 'Destroy', @customer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'

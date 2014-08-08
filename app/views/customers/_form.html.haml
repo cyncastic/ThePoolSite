@@ -8,6 +8,7 @@
         - @customer.errors.full_messages.each do |message|
           %li= message
   %fieldset
+    %legend Contact Info
     .field
       = f.label :full_name
       = f.text_field :full_name
@@ -26,6 +27,8 @@
       = f.select :state, us_states, selected: 'NY'
       = f.label :zip
       = f.text_field :zip
+  %fieldset
+    %legend Pool Info
     .field
       %label
         = f.check_box :salt
@@ -40,8 +43,9 @@
     .field
       = f.label :pool_type_id
       = f.collection_select(:pool_type_id, PoolType.all, :id, :name, {:prompt=>true}, { selected: params[:pool_type_id] })
+  %fieldset
+    %legend Notes
     .field
-      = f.label :notes
       = f.text_area :notes
-    .actions
-      = f.submit
+  .actions
+    = f.submit
