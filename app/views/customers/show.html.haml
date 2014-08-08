@@ -1,35 +1,40 @@
-%p
-  %strong Name:
-  = @customer.full_name
-%p
-  %strong Phone:
-  = number_to_phone @customer.phone, area_code: true
-%p
-  %strong Email:
-  = mail_to @customer.email
-%p
-  %strong Address:
-  %br/
-  = @customer.address
-  %br/
-  #{ @customer.city }, #{@customer.state} #{@customer.zip}
-%p
-  %strong Salt:
-  = @customer.salt
-%p
-  %strong Heater:
-  = @customer.heater
-%p
-  %strong Filter Type:
-  - if @customer.filter_type.present?
-    =@customer.filter_type.name
-%p
-  %strong Pool Type:
-  - if @customer.pool_type.present?
-    =@customer.pool_type.name
-%p
-  %strong Notes:
+%h1= @customer.full_name
+
+%fieldset 
+  %legend Contact Info
+  %p
+    %strong Phone:
+    = number_to_phone @customer.phone, area_code: true
+  %p
+    %strong Email:
+    = mail_to @customer.email
+  %p
+    %strong Address:
+    %br/
+    = @customer.address
+    %br/
+    #{ @customer.city }, #{@customer.state} #{@customer.zip}
+
+%fieldset 
+  %legend Pool Info
+  %p
+    %strong Salt:
+    = @customer.salt
+  %p
+    %strong Heater:
+    = @customer.heater
+  %p
+    %strong Filter Type:
+    - if @customer.filter_type.present?
+      =@customer.filter_type.name
+  %p
+    %strong Pool Type:
+    - if @customer.pool_type.present?
+      =@customer.pool_type.name
+%fieldset 
+  %legend Notes
   = @customer.notes
+
 %hr/
 %ul.actions
   %li= link_to 'Edit', edit_customer_path(@customer), class: 'button'

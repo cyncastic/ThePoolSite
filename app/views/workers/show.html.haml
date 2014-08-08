@@ -1,21 +1,24 @@
-%p
-  %strong Name:
-  = @worker.full_name 
-%p
-  %strong Phone:
-  = @worker.phone
-%p
-  %strong Email:
-  = @worker.email
-%p
-  %strong Address:
-  %br/
-  = @worker.address
-  %br/
-  #{ @worker.city }, #{@worker.state} #{@worker.zip}
-%p
-  %strong Start date:
-  = @worker.start_date
+%h1= @worker.full_name 
+%fieldset 
+  %legend Contact Info
+  %p
+    %strong Phone:
+    = @worker.phone
+  %p
+    %strong Email:
+    = @worker.email
+  %p
+    %strong Address:
+    %br/
+    = @worker.address
+    %br/
+    #{ @worker.city }, #{@worker.state} #{@worker.zip}
+
+%fieldset 
+  %legend Notes
+  = @worker.notes
+
 %hr/
+
 %ul.actions
   %li= link_to 'Edit', edit_worker_path(@worker), class: 'button'
