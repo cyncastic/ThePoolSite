@@ -1,7 +1,6 @@
 %h1= @job.date.strftime('%Y/%m/%d')
 %h2= @job.time.strftime('@ %H:%M')
 
-
 %fieldset
   %legend Job Info
   %p
@@ -25,7 +24,6 @@
   %p
     %strong Worker notes:
     = @job.worker_notes
-
 
 %ul.actions
   %li= link_to 'Edit', edit_job_path(@job), class: 'button'
